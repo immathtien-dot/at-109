@@ -1,0 +1,89 @@
+/*CSS resets*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*repeat user font size preferences*/
+html {
+    font-size: 100%;
+}
+/*General CSS*/
+
+body {
+    /* background-color: pink; */
+
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+header {
+    background-image: url('../images/landscape1.png');
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem;
+    margin-bottom: 3rem;
+    /* background-color: #fff; */
+    border-bottom: #000 1px solid;
+    /* text-align: center; */
+}
+
+header h1 { 
+    font-size: 3rem;
+}
+main {
+
+}
+
+.about-section, 
+.portfolio-section, 
+.contact-section {
+    margin-bottom: 5rem;
+}
+.about-content, 
+.portfolio-content, 
+.contact-content {
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+.about-content h2, 
+.portfolio-content h2, 
+.contact-content h2 {
+    padding: 2rem 0;
+}
+
+.portfolio-item {
+    margin-bottom: 5rem;
+    background-color: #fff;
+    padding: 2rem;
+    text-align: justify;
+    /* border: 2px #000 solid; */
+    /*border-style: solid;
+    border-width: 13px;
+    border-color: #D2DB21 #87871C #00DA80 #D20021;*/
+
+    border-radius: .5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.portfolio-item img {
+    max-width: 100%;        
+    margin: 0 auto;
+    display: block;
+    border-radius: .5rem;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0;
+}
+
+.portfolio-item p {
+    font-size: 1.2rem;
+}
+    .about-section {
+    background-color: #fff;
+}
+    .portfolio-section {
+    background-color: rgb(218, 220, 220);
+}
