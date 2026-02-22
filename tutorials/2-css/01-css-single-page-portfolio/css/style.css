@@ -1,10 +1,11 @@
 /* ~~~~~ color palete ~~~~~ */
+
 :root {
---bg-color-1: #fff
---bg-color-2: #e9ebe8
---font: #111
---accent-1: #e37492
---accent-2: #d3acfa
+--bg-color-1: #fff;
+--bg-color-2: #e9ebe8;
+--font: #111;
+--accent-1: #b7fa70;
+--accent-2: #d3acfa;
 --dark: #222
 }
 /*
@@ -37,9 +38,17 @@ html {
 body {
     background-color: var(--bg-color-1);
     color: var(--font);
-    font-family: sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
+    text-align: justify;
+
+}
+
+@media (max-width:700px) {
+    body {
+        font-size: 1rem;
+    }
 }
 
 header {
@@ -52,15 +61,20 @@ header {
     /* background-color: #fff; */
     border-bottom: #000 1px solid;
     /* text-align: center; */
-}
+ }
 
+@media (max-width:700px) {
+    header {
+        padding: 2rem;
+    }
+}
 header h1 { 
+    color: var(--accent-1);
     font-size: 3rem;
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: var(--accent-1);
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-
+    text-decoration-color: var(--accent-2);
+    font-family: "Lora", serif;
 }
 
 nav {
@@ -81,7 +95,26 @@ nav a:hover {
     background-color: var(--accent-1);
     /* transform: scale(1.1); */
 }
-main {}
+
+@media (max-width:750px) {
+    nav a {
+        margin: 0 .5rem;
+    }
+}
+
+main {
+    margin: 0;
+}
+@media (max-width:850px) {
+    main{
+        margin: 2rem;
+    }
+}
+@media (max-width:600px) {
+main {
+    margin: 1rem;   
+}
+}
 
 .about-section, 
 .portfolio-section, 
@@ -98,22 +131,36 @@ main {}
 .about-content h2, 
 .portfolio-content h2, 
 .contact-content h2 {
-    padding: 2rem 0;
+    margin: 1rem 0;
+    padding: .5rem 0;
+    background-color: var(--accent-1);
+    border-radius: 2rem;
+    display: inline-block;
 }
 
 .portfolio-item {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     background-color: var(--bg-color-1);
-    padding: 2rem;
-    text-align: justify;
+    padding: 4rem;
     /* border: 2px #000 solid; */
-    /*border-style: solid;
+    border-style: solid;
     border-width: 13px;
-    border-color: #D2DB21 #87871C #00DA80 #D20021;*/
-
+    border-color: #D2DB21 #87871C #00DA80 #D20021;
     border-radius: .5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
+
+@media (max-width:800px) {
+    .portfolio-item {
+        padding: 3rem;
+    }
+}
+@media (max-width:600px) {
+    .portfolio-item {
+        padding: 2rem;
+    }
+}
+
 .portfolio-item img {
     max-width: 100%;        
     margin: 0 auto;
@@ -129,10 +176,10 @@ main {}
     font-size: 1.2rem;
 }
     .about-section {
-    background-color: #fff;
+    /* background-color: #fff; */
 }
     .portfolio-section {
-    background-color: #e9abe8
+    background-color: var(--bg-color-2);
 }
 
 footer {
@@ -158,12 +205,10 @@ footer p {
     color: var(--accent-2);
 }
 
+
 .nunito {
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
 }
