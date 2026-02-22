@@ -1,4 +1,23 @@
-/*CSS resets*/
+/* ~~~~~ color palete ~~~~~ */
+:root {
+--bg-color-1: #fff
+--bg-color-2: #e9ebe8
+--font: #111
+--accent-1: #e37492
+--accent-2: #d3acfa
+--dark: #222
+}
+/*
+background color 1: #fff, 
+background color 2: #e9ebe8
+font: #111
+accent 1: #e5fa00
+accent 2: #00da80
+dark: #333
+*/
+
+
+/* ~~~~~ CSS resets ~~~~~ */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +26,17 @@
 html {
     font-size: 100%;
 }
-/*General CSS*/
+
+
+/* ~~~~~General CSS ~~~~~ */
+
+html {
+    scroll-behavior:smooth;
+}
 
 body {
-    /* background-color: pink; */
-
+    background-color: var(--bg-color-1);
+    color: var(--font);
     font-family: sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -33,7 +58,9 @@ header h1 {
     font-size: 3rem;
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #baebc0;
+    text-decoration-color: var(--accent-1);
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+
 }
 
 nav {
@@ -47,13 +74,14 @@ nav a {
     color: #000;
     display: inline-block;
     margin: 0 1rem;
+    transition: all .3s ease;
 }
-nav a:hover {
-    background-color: #7CEEA8;
-}
-main {
 
+nav a:hover {
+    background-color: var(--accent-1);
+    /* transform: scale(1.1); */
 }
+main {}
 
 .about-section, 
 .portfolio-section, 
@@ -75,7 +103,7 @@ main {
 
 .portfolio-item {
     margin-bottom: 5rem;
-    background-color: #fff;
+    background-color: var(--bg-color-1);
     padding: 2rem;
     text-align: justify;
     /* border: 2px #000 solid; */
@@ -104,17 +132,38 @@ main {
     background-color: #fff;
 }
     .portfolio-section {
-    background-color: rgb(218, 220, 220);
+    background-color: #e9abe8
 }
 
 footer {
-    background-color: #333;
-    color: #eee;
-    padding: 1 rem;
+    background-color: var(--dark);
+    color: var(--bg-color-1);
+    padding: 1rem;
     text-align: end;
 
 }
 footer p {
     font-size: 1.2rem;
 
+}
+
+
+/* style classes */
+
+.accent-1 {
+    color: var(--accent-1);
+}
+
+.accent-2 {
+    color: var(--accent-2);
+}
+
+.nunito {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
