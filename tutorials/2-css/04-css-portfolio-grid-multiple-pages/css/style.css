@@ -1,0 +1,236 @@
+/* ~~~~~ color palete ~~~~~ */
+
+:root {
+    --bg-color-1: #fff;
+    --bg-color-2: #e9ebe8;
+    --font: #111;
+    --accent-1: #b7fa70;
+    --accent-2: #d3acfa;
+    --dark: #222;
+}
+
+/*
+background color 1: #fff, 
+background color 2: #e9ebe8
+font: #111
+accent 1: #e5fa00
+accent 2: #00da80
+dark: #333
+*/
+
+
+/* ~~~~~ CSS resets ~~~~~ */
+*,
+*::before,
+*::after {
+        box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*repeat user font size preferences*/
+html {
+    font-size: 100%;
+}
+/*make images responsive*/
+img {
+display: block;
+max-width: 100%;
+}
+
+
+/* ~~~~~General CSS ~~~~~ */
+
+html{
+    scroll-behavior: smooth;
+}
+    
+body {
+    background-color: var(--bg-color-1);
+    font-size: 1.5rem;
+    color: var(--font);
+    font-family: 'Lucia Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    /*text-align: justify;*/
+}
+
+header {
+    padding: 5rem 2rem;
+    margin-bottom: 7rem;
+}
+
+header h1 {
+    text-shadow: -4px 3px 0 #87c975,-6px -3px 8px rgba(157,206,116,0)
+}
+
+nav a {
+    color: var(--font);
+    text-decoration: none;
+    /*margin: 0 1rem;
+    transition: all .5s ease;*/
+}
+
+nav a:hover {
+    color: var(--accent-2); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    display: none;
+    background: none;
+    font-size: 3rem;
+    border: none;
+    color: var(--accent-2);
+}
+
+.nav-menu {
+list-style: none;
+display: flex;
+gap: 1rem;
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        align-items: flex-start;
+    }
+    .nav {
+        display: flex;
+        align-self: flex-end; 
+}
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--font);
+    padding: 1rem;
+}
+
+.nav-menu a {
+    color: var(--bg-color-1);
+
+}
+
+header {
+        padding: 1.5rem 2rem;
+}
+
+
+main {
+    margin: 0;
+}
+
+@media (max-width: 1030px) {
+    main {
+    margin: 2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        margin: 1rem;
+    }
+}
+
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0;
+
+}
+
+.portfolio-item {
+padding: 1rem;
+background-color: var(--font);
+color: var(--bg-color-1);
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+
+}
+.portfolio-item p {
+    font-size: 1rem;
+
+}
+
+.portfolio-item h3 {
+    font-size: 1.3rem;
+}
+
+.portfolio-item img {
+   /* border-color:#d3acfa;
+    border-radius: 1rem;*/
+}
+
+
+footer {
+    padding: 1rem 2rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 3rem;
+    margin: 0 .5rem;
+}
+
+@media (max-width: 750px) {
+    footer p {
+        font-size: 1.2rem;
+
+    }
+    footer img {
+        max-width: 1.5rem;
+        margin: 0.1rem;
+    }
+}
+
+@media (max-width: 450px){
+    fotter p {
+        font-size: 1rem;
+    }
+}
+/*~~~~~~~~~~~~~~~~~~flex styling~~~~~~~~~~~~~~~~~*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flex-item-grid {
+    flex: 1 0 18rem;
+
+}
