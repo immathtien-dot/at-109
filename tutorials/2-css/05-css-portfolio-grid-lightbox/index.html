@@ -11,20 +11,21 @@
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href="css/baguetteBox.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="nav-brand">
-                <a href='#'><h1>Linsey Truong</h1></a>
+                <h1>Linsey Truong</h1>
             </div>
             <div class="nav">
                 <button class='hamburger'>☰</button>
                 <ul class="nav-menu">
-                    <li><a href="../../#about-section">About</a></li>
-                    <li><a href="../../#portfolio-section">Work</a></li>
-                    <li><a href="../../#contact-section">Contact</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#portfolio-section">Work</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,50 +45,44 @@
                 <div class="flex-container-grid">
                     <div class="portfolio-item flex-item-grid">
 
-                        <a href='projects/project-template'><img src="images/landscape2.png" alt="Landscape">
+                        <a href='images/landscape2.png' data-caption='Caption for the lightbox'><img src="images/landscape2.png" alt="Landscape"></a>
                             <h3>Work Title</h3>
                             <p> Lorem ipsum dolor sit amet.</p>
-                        </a>
+                    </div>
+                    <div class="portfolio-item flex-item-grid">
+                        <a href='images/landscape1.png' data-caption='lightbox caption'><img src="images/landscape1.png" alt="Landscape"></a>
+                            <h3>Work Title</h3>
+                            <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="portfolio-item flex-item-grid">
+                        <a href='images/collage.png' data-caption='fyfyfjjhyfjfyf ytfy fyfyfjjhyfjfyf'><img src="images/collage.png" alt="Collage"></a>
+                            <h3>Work Title</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="portfolio-item flex-item-grid">
+                        <img src="images/landscape2.png" alt="Landscape">
+                        <h3>Work Title</h3>
+                        <p> Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="portfolio-item flex-item-grid">
+                        <a href='projects/project-template'><img src="images/collage.png" alt="Collage">
+                            <h3>Work Title</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
                         <a href='projects/project-template'><img src="images/landscape1.png" alt="Landscape">
                             <h3>Work Title</h3>
                             <p> Lorem ipsum dolor sit amet.</p>
-                        </a>
                     </div>
                     <div class="portfolio-item flex-item-grid">
                         <a href='projects/project-template'><img src="images/collage.png" alt="Collage">
                             <h3>Work Title</h3>
-                            <p> Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
-                    <div class="portfolio-item flex-item-grid">
-                        <a href='projects/project-template'><img src="images/intro.png" alt="Basic Intro">
-                            <h3>Work Title</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
-                    <div class="portfolio-item flex-item-grid">
-                        <a href='projects/project-template'><img src="images/landscape2.png" alt="Landscape">
-                            <h3>Work Title</h3>
-                            <p> Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
                         <a href='projects/project-template'><img src="images/landscape1.png" alt="Landscape">
                             <h3>Work Title</h3>
                             <p> Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
-                    <div class="portfolio-item flex-item-grid">
-                        <a href='projects/project-template'><img src="images/collage.png" alt="Collage">
-                            <h3>Work Title</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        </a>
-                    </div>
-                    <div class="portfolio-item flex-item-grid">
-                        <a href='projects/project-template'><img src="images/intro.png" alt="Basic Intro">
-                            <h3>Work Title</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
                         </a>
                     </div>
                 </div>
@@ -109,6 +104,12 @@
         </div>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/baguetteBox.js"></script>
+    <script>
+        baguetteBox.run('.flex-container-grid', {
+            captions: true
+        })
+    </script>
 </body>
 
 </html>
