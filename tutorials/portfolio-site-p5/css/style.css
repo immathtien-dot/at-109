@@ -1,0 +1,115 @@
+
+body{
+    animation: change-color 10s infinite alternate;
+}
+
+@keyframes change-color {
+    0% {background-color:antiquewhite;}
+    50% {background-color:lightcoral;}
+    100% {background-color:lightblue;}
+}
+
+.title{
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {transform: skew(0deg, 0deg);}
+    100% {transform: skew(30deg, 20deg);}
+}
+
+.square {
+    background-color: blueviolet;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px; 
+    margin: 50px auto;
+    transition: all .5s;
+
+}
+
+.square:hover {    
+    background-color: red;
+    transform: rotate(30deg);
+}
+.button-div{
+    text-align: center
+}
+.button {
+    color: white;
+    background-color: green;
+    padding: 15px;
+    margin: 50px auto;
+    /* display: block;
+    width: 100px
+    text-align: center;*/
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.button:hover {
+    background-color: blue;
+    color: black;
+    transform: scale(1.5);
+    
+}
+
+.loading {
+    background-color: green;
+    animation: stretch 3s;
+    width: 80vw;
+
+}
+
+@keyframes stretch {
+    0% {width: 100px;}
+    100% {width: 80vw;}
+}
+
+.subtitle {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    padding: 50px auto;
+    margin: auto;
+    border-radius: 10px;
+    animation: rubberBand 3s infinite alternate;
+}
+
+.subtitle:hover {
+    background-color: antiquewhite;
+    width: fit-content;
+    color: black;
+    transform: scale(1);
+}
+
+@keyframes rubberBand {
+    0% {transform: scale(1);}
+    30% {transform: scale(1.1);}
+    50% {transform: scale(1.2);}
+    70% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+
+.cat-img {
+    display: block;
+    margin: auto;
+    animation: swing 2s infinite alternate;
+}
+.cat-img:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+@keyframes swing {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(8deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
