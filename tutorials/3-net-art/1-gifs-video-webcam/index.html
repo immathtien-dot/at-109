@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎬</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
-        <iframe width="1120" height="730" src="https://www.youtube.com/embed/tcwPdwaN8T8?si=oeKrkmeNILnyfUDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="720" height="530" src="https://www.youtube.com/embed/tcwPdwaN8T8?si=oeKrkmeNILnyfUDG" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img src="media/dance.gif" alt="dancing" class="dancing">
+    <div class="swim-wild-div">
+        <p>swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+            swim wild swim free swim wildswim wild swim free swim wild!
+        </p>
+        <img src="media/dolphin.gif" alt="dolphin" class="dolphin">
+        </div>
+        <!-- autoplay video-->
+        <video width="180" height="320" autoplay muted loop>
+            <source src="media/videoplayback.mp4" type="video/mp4">
+        </video>
+        <!--hover videos-->
+         <video class="hover-video" width="180" height="320" muted loop>
+            <source src="media/videoplayback.mp4" type="video/mp4">
+        </video>
+          <video class="hover-video" width="180" height="320" muted loop>
+            <source src="media/videoplayback.mp4" type="video/mp4">
+        </video>
+        <!-- click on play video to play/pause -->
+          <video class="click-video" width="180" height="320" muted loop>
+            <source src="media/videoplayback.mp4" type="video/mp4">
+        </video>
+        <video id="webcam" autoplay playsinline></video>
+  
     </main>
+
+    <script src="js/video.js"></script>
+    <script src='js/webcam.js'></script>
 </body>
 </html>
