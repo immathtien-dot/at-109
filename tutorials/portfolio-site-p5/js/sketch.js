@@ -35,3 +35,13 @@ function drawThing(_x, _y) {
     ellipse(_x + 10, _y, 5, 5);
     ellipse(_x - 10, _y + 5, 5, 5);
 }
+
+function draw(){
+    drawThing(mouseX - 50, mouseY + 75);
+
+}
+function drawThing(_x,_y){
+    strokeWeight(0);
+    fill(random(200,255), random(200,255), random(200,255));
+    ellipse(_x, _y, 30, 30);
+}
