@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width,initial-scale=1" />
+			<title>Copilot Demo — Social Feed</title>
+			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="styles.css">
+	            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	</head>
+	<body>
+		<!-- background 3D dinosaurs (subtle, non-interactive) -->
+		<div class="bg-dinos" aria-hidden="true">
+			<!-- decorative model-viewer elements: non-interactive, lazy-loaded -->
+			<model-viewer class="dino dino-1" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/T-Rex/glTF-Binary/T-Rex.glb" alt="T-Rex" interaction-prompt="none" auto-rotate loading="lazy" exposure="0.9" shadow-intensity="0"></model-viewer>
+			<model-viewer class="dino dino-2" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/T-Rex/glTF-Binary/T-Rex.glb" alt="T-Rex" interaction-prompt="none" auto-rotate loading="lazy" exposure="0.9" shadow-intensity="0"></model-viewer>
+		</div>
+		<header class="topbar">
+			<div class="logo">Feed</div>
+			<div class="search">
+				<input placeholder="Search" aria-label="Search" />
+			</div>
+			<nav class="top-actions">
+				<button class="icon-btn">+</button>
+				<button class="icon-btn">⚙</button>
+			</nav>
+		</header>
+
+		<main class="layout">
+			<aside class="sidebar left">
+				<div class="profile-card">
+					<div class="avatar">TD</div>
+					<div>
+						<div class="name">Tienthuy Demo</div>
+						<div class="handle">@tienthuy</div>
+					</div>
+				</div>
+				<nav class="nav-list">
+					<a class="active">Home</a>
+					<a>Explore</a>
+					<a>Messages</a>
+					<a>Bookmarks</a>
+				</nav>
+			</aside>
+
+			<section class="feed">
+						<div class="composer">
+					<div class="composer-head">
+						<div class="avatar sm">TD</div>
+						<div class="composer-controls">
+							<input id="author" placeholder="Your name" value="You" />
+							<div class="composer-actions">
+								<button id="postBtn" class="primary">Post</button>
+							</div>
+						</div>
+					</div>
+							<textarea id="content" rows="3" placeholder="What's happening?"></textarea>
+							<div class="composer-footer">
+								<label class="image-upload">
+									<input type="file" id="imageInput" accept="image/*" />
+									<span>Attach image</span>
+								</label>
+								<div id="previewWrap" class="preview-wrap" aria-hidden="true">
+									<img id="preview" alt="preview" />
+									<button id="removePreview" class="btn">Remove</button>
+								</div>
+							</div>
+				</div>
+
+				<div id="posts" class="posts" aria-live="polite"></div>
+			</section>
+
+			<aside class="sidebar right">
+				<div class="sticky">
+					<div class="trends">
+						<h4>Trends for you</h4>
+						<ul>
+							<li>#WebDesign</li>
+							<li>#JavaScript</li>
+							<li>#CopilotDemo</li>
+						</ul>
+					</div>
+					<div class="suggestions">
+						<h4>Suggested</h4>
+						<div class="suggestion">
+							<div class="avatar xs">AC</div>
+							<div>
+								<div class="name">Alex Code</div>
+								<button class="follow">Follow</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</main>
+
+		<footer class="footer">Static demo — open <code>index.html</code> locally to view</footer>
+
+		<script src="js/app.js" defer></script>
+	</body>
+</html>

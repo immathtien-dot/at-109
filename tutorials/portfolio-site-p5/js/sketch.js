@@ -2,12 +2,13 @@
 let canvas;
 let xPos = 0;
 let yPos = 0;
-let easing = .005;
+let easing = .05;
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0.0);
-    canvas.style("z-index", -2);
+    canvas.style('z-index', '-2');
+        canvas.style('pointer-events', 'none');
     //background(225);
 }
 
@@ -45,3 +46,6 @@ function drawThing(_x,_y){
     fill(random(200,255), random(200,255), random(200,255));
     ellipse(_x, _y, 30, 30);
 }
+
+
+
